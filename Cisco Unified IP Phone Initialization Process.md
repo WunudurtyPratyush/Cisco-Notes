@@ -16,10 +16,9 @@ The two cisco unified IP Phones in cluster 2 provide the basis for the call flow
 
 Procedure:
 
-If you have set the appropriate options in DHCP Server (such as option 66 or option 150) the Cisco unified phone IP Phone sends a request at initialization to the DHCP Server to get an IP address, Domain name System DNS) server address, and TFTP server name or address.  It also gets a default gateway address if you have set these options in the DHCP server  (option 03) 
-
-If DHCP Sends a DNS name of the TFTP Server, you need a DNS server IP address to map the name to an IP address. By pass this step to if the DHCP Server sends the IP address of the TFTP server. In this case study, DHCP Server sent the IP Address of the TFTP Server because DNS was not configured.
-
-If the DHCP server doesn’t include a TFTP Server name, the cisco unified IP Phone uses the default server name.
+1) If you have set the appropriate options in DHCP Server (such as option 66 or option 150) the Cisco unified phone IP Phone sends a request at initialization to the DHCP Server to get an IP address, Domain name System DNS) server address, and TFTP server name or address.  It also gets a default gateway address if you have set these options in the DHCP server  (option 03) 
+2) If the DNS Server is configured, when DHCP Server sends a DNS name of the TFTP server we need a DNS Server IP address to Map the name to an IP Address. Bypass this step if the DHCP Server sends the IP Address of the TFTP server> In this case study, the DHCP Server sent the IP address of the TFTP because DNS Was not configured.
+3) If the DHCP server doesn’t include a TFTP Server name, the cisco unified IP Phone uses the default server name.
+4) The configuration file (.cnf) gets retrived fron the TFTP Server. All .cnf files have the name SEP<mac_address>.cnf. If this is the first time that the phone is registering with the Cisco Unified COmmunications Manager (CUCM) , a default file, SEPdeafult.cnf, gets downloaded to the Cisco phone. In this case study the first cisco unified IP Phone uses the IP Address 172.16.70.230 (its MAC address is 172.16.70.231 
 
 
