@@ -23,3 +23,7 @@ Procedure:
 5) All .cnf files include the IP Addresses for the Primary and secondary Cisco Unified Communications Managers. The cisco unified IP Phones uses this IP address to contact the primary Cisco unified Communications manager and to register.
 6) After the cisco unified IP Phone connects and registers with Cisco unified Coummunications manager, the Cisco Unified Communication Manager tells the Cisco Unified IP Phone which executable version (Called a load ID) to run. If the specified version doesnt match the executing version of the Cisco unified IP phone, the cisco unified IP Phone will request the new executable from the TFTP Server and reset automatically.
 
+
+
+
+
