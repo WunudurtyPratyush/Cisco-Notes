@@ -1,0 +1,95 @@
+When you plug an old-school telephone into the wall, two wires connect it to the telephone company’s exchange.
+
+
+These two wires are called:
+
+Tip → the positive wire (usually at 0 volts)
+
+Ring → the negative wire (usually at −48 volts)
+
+Together, they’re called the Tip & Ring pair — this is the telephone line.
+
+Think of them like:
+
+Tip (Green wire)  → +ve or Ground reference
+Ring (Red wire)   → -48 Volts (battery side)
+
+⚡ Step 2: What happens when the phone is idle
+
+When the phone is on the hook (not in use):
+
+The exchange sends −48 volts DC between Tip and Ring.
+
+This voltage powers the phone’s internal circuits, even though it’s not calling anyone.
+
+It’s like the phone is sleeping but plugged into power.
+✅ Voltage present,
+❌ No current flowing yet (open circuit).
+
+☎️ Step 3: When the phone rings
+
+When someone calls you, the telephone exchange needs to make your phone ring.
+To do that, it adds a ringing voltage on top of the −48V line.
+
+This ring voltage is a high-voltage AC signal (around 90 Volts AC at 20 Hz).
+
+It gets added (superimposed) onto the −48V DC line.
+
+So the phone line now looks like this:
+
+Tip = 0V
+Ring = -48V DC + 90V AC ringing signal
+
+
+That alternating current drives the mechanical bell or ringer circuit inside the phone — causing it to ring.
+
+📞 Step 4: When you lift the receiver (Off-hook)
+
+When you pick up the handset:
+
+The circuit between Tip and Ring becomes closed (current starts flowing).
+
+The exchange detects that current → means “user answered.”
+
+It then stops sending the 90V ringing signal and starts voice transmission.
+
+Now, instead of 90V AC, the line carries small analog voice signals (around 1V AC) superimposed on the DC.
+
+🔄 Step 5: After the call ends
+
+When you hang up, the circuit opens again → the current stops.
+The exchange sees “no current” → call ends.
+It goes back to idle state (only −48V DC on the line).
+
+🧩 Step 6: So where does the Tip & Ring Generator come in?
+
+The Tip & Ring Generator is the circuit that creates all those signals:
+
+What it Creates	Purpose
+−48V DC	Feeds power to the phone
++90V AC @ 20Hz	Makes the phone ring
+Detects current flow	Knows if phone is off-hook
+Handles voice signals	Passes audio back and forth
+
+Basically, it pretends to be the telephone company.
+So your phone behaves like it’s connected to a real network — even if it’s connected to a PBX, VoIP gateway, or a simulator.
+
+📡 Step 7: Where you’ll find it used
+Device	What the Tip & Ring Generator Does
+PBX / IP-PBX	Rings internal analog phones
+FXS Port (on routers or gateways)	Converts VoIP call → analog signal
+Line Simulator / Tester	Lets you test phones or modems without real line
+Modem / Alarm System	Provides fake line for testing dialing or alerts
+
+Example:
+When a VoIP call comes in → your ATA or router’s FXS port uses its tip & ring generator to ring your old analog phone at home.
+
+🎯 Step 8: Simple Summary (Easy to Remember)
+Phase	What Happens on Tip & Ring	Voltage
+Idle (on-hook)	−48V DC	-48V
+Ringing	−48V DC + 90V AC	~90V AC + DC
+Talking (off-hook)	−48V DC + small audio signal	~−48V ± 2V
+Hang up	Back to idle	-48V
+📖 In one line:
+
+The Tip and Ring generator is the heart of analog telephony — it supplies power, makes phones ring, and carries your voice — all over just two wires.
